@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos de Sintaxis en JavaScript</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Ejemplos Prácticos de Sintaxis en JavaScript</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#control-flujo">Control de Flujo y Manejo de Errores</a></li>
+            <li><a href="#bucles">Bucles e Iteración</a></li>
+            <li><a href="#funciones">Funciones</a></li>
+            <li><a href="#expresiones">Expresiones y Operadores</a></li>
+            <li><a href="#numeros-fechas">Números y Fechas</a></li>
+            <li><a href="#formateo-texto">Formateo de Texto</a></li>
+            <li><a href="#colecciones">Colecciones Indexadas</a></li>
+            <li><a href="#dom">DOM</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="control-flujo">
+            <h2>Control de Flujo y Manejo de Errores</h2>
+            <div class="example">
+                <h3>if...else</h3>
+                <pre><code>
+if (condition) {
+    // código a ejecutar si la condición es verdadera
+} else {
+    // código a ejecutar si la condición es falsa
+}
+                </code></pre>
+            </div>
+            <div class="example">
+                <h3>switch</h3>
+                <pre><code>
+switch (expression) {
+    case value1:
+        // código a ejecutar si la expresión es igual a value1
+        break;
+    case value2:
+        // código a ejecutar si la expresión es igual a value2
+        break;
+    default:
+        // código a ejecutar si no coincide con ningún valor
+}
+                </code></pre>
+            </div>
+            <div class="example">
+                <h3>try/catch/throw</h3>
+                <pre><code>
+try {
+    // código que puede lanzar una excepción
+    throw new Error('Algo salió mal');
+} catch (error) {
+    console.error(error.message);
+}
+                </code></pre>
+            </div>
+            <div class="example">
+                <h3>Objetos Error</h3>
+                <pre><code>
+const error = new Error('Mensaje de error');
+console.log(error.name);    // 'Error'
+console.log(error.message); // 'Mensaje de error'
+                </code></pre>
+            </div>
+        </section>
+
+        <section id="bucles">
+            <h2>Bucles e Iteración</h2>
+            <div class="example">
+                <h3>for</h3>
+                <pre><code>
+for (let i = 0; i < 10; i++) {
+    console.log(i);
+}
+                </code></pre>
+            </div>
+            <div class="example">
+                <h3>while</h3>
+                <pre><code>
+let i = 0;
+while (i < 10) {
+    console.log(i);
+    i++;
+}
+                </code></pre>
+            </div>
+            <div class="example">
+                <h3>do...while</h3>
+                <pre><code>
+let i = 0;
+do {
+    console.log(i);
+    i++;
+} while (i < 10);
+                </code></pre>
+            </div>
+        </section>
+
+        <section id="funciones">
+            <h2>Funciones</h2>
+            <div class="example">
+                <h3>Definir funciones</h3>
+                <pre><code>
+function saludar(nombre) {
+    return 'Hola ' + nombre;
+}
+                </code></pre>
+            </div>
+            <div class="example">
+                <h3>Llamar funciones</h3>
+                <pre><code>
+const mensaje = saludar('Mundo');
+console.log(mensaje); // 'Hola Mundo'
+                </code></pre>
+            </div>
+        </section>
+
+        <section id="expresiones">
+            <h2>Expresiones y Operadores</h2>
+            <div class="example">
+                <h3>Asignación y Comparación</h3>
+                <pre><code>
+let x = 10; // Asignación
+let y = 20;
+if (x === y) {
+    console.log('x es igual a y');
+} else {
+    console.log('x no es igual a y');
+}
+                </code></pre>
+            </div>
+            <div class="example">
+                <h3>Operadores aritméticos</h3>
+                <pre><code>
+let suma = 10 + 5;
+let resta = 10 - 5;
+let multiplicacion = 10 * 5;
+let division = 10 / 5;
+console.log(suma, resta, multiplicacion, division);
+                </code></pre>
+            </div>
+            <div class="example">
+                <h3>Operadores lógicos</h3>
+                <pre><code>
+let a = true;
+let b = false;
+console.log(a && b); // false
+console.log(a || b); // true
+console.log(!a);     // false
+                </code></pre>
+            </div>
+        </section>
+
+        <section id="numeros-fechas">
+            <h2>Números y Fechas</h2>
+            <div class="example">
+                <h3>Objeto Number</h3>
+                <pre><code>
+let numero = 123.456;
+console.log(numero.toFixed(2)); // '123.46'
+                </code></pre>
+            </div>
+            <div class="example">
+                <h3>Objeto Math</h3>
+                <pre><code>
+let raizCuadrada = Math.sqrt(16);
+let maximo = Math.max(10, 20, 30);
+console.log(raizCuadrada, maximo);
+                </code></pre>
+            </div>
+            <div class="example">
+                <h3>Objeto Date</h3>
+                <pre><code>
+let fecha = new Date();
+console.log(fecha.toDateString()); // 'Sat Jul 07 2024'
+                </code></pre>
+            </div>
+        </section>
+
+        <section id="formateo-texto">
+            <h2>Formateo de Texto</h2>
+            <div class="example">
+                <h3>Cadenas literales</h3>
+                <pre><code>
+let nombre = 'Juan';
+let saludo = `Hola, ${nombre}`;
+console.log(saludo); // 'Hola, Juan'
+                </code></pre>
+            </div>
+            <div class="example">
+                <h3>Objeto String</h3>
+                <pre><code>
+let texto = 'JavaScript';
+console.log(texto.length);      // 10
+console.log(texto.toUpperCase()); // 'JAVASCRIPT'
+                </code></pre>
+            </div>
+        </section>
+
+        <section id="colecciones">
+            <h2>Colecciones Indexadas</h2>
+            <div class="example">
+                <h3>Arreglos</h3>
+                <pre><code>
+let numeros = [1, 2, 3, 4, 5];
+numeros.forEach(num => console.log(num));
+                </code></pre>
+            </div>
+            <div class="example">
+                <h3>Arreglos tipados</h3>
+                <pre><code>
+let buffer = new ArrayBuffer(16);
+let vista = new Int32Array(buffer);
+vista[0] = 42;
+console.log(vista[0]); // 42
+                </code></pre>
+            </div>
+        </section>
+
+        <section id="dom">
+            <h2>DOM</h2>
+            <div class="example">
+                <h3>Encontrar elementos HTML por ID</h3>
+                <pre><code>
+let elemento = document.getElementById('miElemento');
+console.log(elemento);
+                </code></pre>
+            </div>
+            <div class="example">
+                <h3>Encontrar elementos HTML por nombre de etiqueta</h3>
+                <pre><code>
+let elementos = document.getElementsByTagName('p');
+console.log(elementos);
+                </code></pre>
+            </div>
+            <div class="example">
+                <h3>Encontrar elementos HTML por nombre de clase</h3>
+                <pre><code>
+let elementos = document.getElementsByClassName('miClase');
+console.log(elementos);
+                </code></pre>
+            </div>
+            <div class="example">
+                <h3>Encontrar elementos HTML mediante selectores CSS</h3>
+                <pre><code>
+let elemento = document.querySelector('.miClase');
+console.log(elemento);
+let elementos = document.querySelectorAll('.miClase');
+console.log(elementos);
+                </code></pre>
+            </div>
+            <div class="example">
+                <h3>Encontrar elementos HTML por colecciones de objetos HTML</h3>
+                <pre><code>
+let coleccion = document.forms['miFormulario'];
+console.log(coleccion);
+                </code></pre>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Desarrollado por Ignacio Araya - Universidad Técnica Nacional 2024</p>
+    </footer>
+</body>
+</html>
